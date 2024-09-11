@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
         valueListenable: homeViewModel.pages,
         builder: (context, pages, child) {
           return ListView.separated(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             itemCount: pages.length,
             itemBuilder: (context, index) {
               final pageItem = pages[index];
@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
                           color: Colors.grey.withOpacity(0.5), // Shadow color
                           spreadRadius: 1,  // How far the shadow spreads
                           blurRadius: 4,    // How blurry the shadow is
-                          offset: Offset(0, 2), // Position of the shadow (x, y)
+                          offset: const Offset(0, 2), // Position of the shadow (x, y)
                         )
                       ]
                   ),
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       Text(
                         pageItem.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
               );
             },
             separatorBuilder: (BuildContext context, int index) {
-              return SizedBox(
+              return const SizedBox(
                 height: 10,
               );
             },
